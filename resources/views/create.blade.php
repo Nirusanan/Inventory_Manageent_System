@@ -6,9 +6,6 @@
         <div class="pull-left">
             <h2>Add New Product</h2>
         </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
-        </div>
     </div>
 </div>
    
@@ -57,9 +54,21 @@
             </div>
         </div>
 
-        <div class="form-group row col-sm-4 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="form-group row">
+            <div class="pull-left">
+                <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
+        
+        <!-- <div class="form-group row col-sm-4 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div> -->
+
+        
 
 
 </form>

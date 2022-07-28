@@ -16,21 +16,21 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
+            <th>ProductName</th>
             <th>Category</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $product->name }}</td>
-            <td>{{ $product->detail }}</td>
+            <td>{{ $product->ProductName }}</td>
+            <td>{{ $product->CategoryName }}</td>
             <td>
-                <form action="{{ route('products.destroy',$product->ProductName) }}" method="POST">
+                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('products.show',$product->ProductName) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('products.edit',$product->ProductName) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')

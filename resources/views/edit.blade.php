@@ -2,6 +2,7 @@
    
 @section('content')
     
+
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Edit Product</h2>
@@ -18,16 +19,16 @@
             </ul>
         </div>
     @endif
+  
 
-
-    <form action="{{ route('products.update',$product->ProductName) }}" method="POST">
+    <form action="{{ route('products.update',$product->id) }}" method="POST">
         @csrf
         @method('PUT')
   
         <div class="form-group row">
             <label  class="col-sm-4 col-md-1 col-form-label">Name: </label>
             <div class="col-sm-4">
-                <input type="text" name="ProductName" value="{{ $product->ProductName }}" class="form-control" placeholder="Name">
+                <input type="text" name="ProductName" value="{{ $product->ProductName }}" class="form-control" placeholder="name">
             </div>
         </div>
 
