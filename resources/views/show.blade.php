@@ -35,4 +35,6 @@
             <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
         </div>
     </div>
+
+    
 @endsection

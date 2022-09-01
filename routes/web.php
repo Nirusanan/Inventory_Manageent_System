@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\EmailController;
 
 
 /*
@@ -22,5 +23,7 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [ProductController::class,'index']);
 
 Route::resource('products', ProductController::class);
+
+Route::post('smtp/test-mail', [EmailController::class, 'testMail'])->name('smtp.test-mail');
 
 
